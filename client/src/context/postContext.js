@@ -4,11 +4,10 @@ export const usePosts = () => {
    const cntxt = useContext(context)
    return cntxt
 }
-export const PostContainer = ({children}) => {
+export const PostProvider = ({children}) => {
     const [posts, setPosts] = useState([])
     return <context.Provider value={{
-        posts,
-        setPosts
+        posts
     }}>
         {children}
     </context.Provider>
